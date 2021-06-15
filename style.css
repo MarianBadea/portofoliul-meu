@@ -1,0 +1,382 @@
+html{
+    font-size: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+
+*{ box-sizing: border-box;}
+
+.clearfix::after{
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+/*Sections*/
+.section-block{
+  height: calc(100vh - 7.5rem); 
+  padding: 5rem;
+}
+
+.section-block.not-fullscreen{
+    height: auto;
+}
+
+.section-block.grey{
+    background-color:rgb(2, 92, 92);
+}
+
+.section-block.lilla{
+    background-color: dimgrey;
+}
+
+.section-block.black{
+    background-color: rgb(17, 17, 17);
+}
+
+.section-block h1, .section-block h2{
+   display:block; 
+   margin-bottom: 10rem; 
+    text-align: center; 
+    font-size: 4.5rem; 
+    font-weight: 600;
+}
+
+.section-block.grey h1, .section-block.grey h2, .section-block.lilla h2{
+    color:#fff
+}
+
+@media (max-width: 812px), (max-width:812px) and (orientation:landscape){
+
+  .section-block{
+    height:auto; 
+    min-height:calc(100vh - 7.5rem); 
+    padding:2.5rem; 
+  }
+
+  .section-block.not-fullscreen {
+      min-height:0;
+  }
+
+  .section-block h1, .section-block h2{
+    font-size: 2.8rem; 
+    margin-bottom: 5rem;
+  }
+}
+/*Sections*/
+
+/* Navigation */
+header{ 
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+  width: 100%; 
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  height: 7.5rem; 
+  padding: 0.75rem 5rem; 
+  background-color: darkcyan; 
+  z-index:2; 
+}
+
+header + *{ 
+   margin-top: 7.5rem;
+}
+
+.logo{ 
+   display: inline-block; 
+}
+
+.logo > img{ 
+     width: 5.5rem; 
+     height: 6rem; 
+     border-radius: 50%; 
+    }
+
+.navigation { 
+   display: inline-block; 
+   text-align: center;
+  }
+
+.navigation > a{
+     display: inline-block; 
+     margin-right: 1rem; 
+     font-size: 1.7rem; 
+     text-decoration: none; 
+     color: white; 
+}  
+
+   
+.navigation > a:last-child{ margin-right: 0;} 
+.navigation > a:hover{text-decoration: underline;}
+
+@media (max-width: 580px){
+
+    header{
+      padding: 0.75rem 2.5rem; 
+    }
+    
+    .navigation > a{ 
+      margin-right: 0.5rem;
+       margin-top: 0.5rem; 
+    }  
+}
+/* Navigation */
+
+/*Hero*/
+.hero{
+  display: flex; 
+  align-items: center;
+  position: relative; 
+  padding: 0 5rem 20vh; 
+  color: #fff;
+}
+
+.hero{ 
+  background-image: url("media/freedom.jpg");
+  background-repeat: no-repeat;
+  background-position: center; 
+  background-size: cover;
+}
+
+.hero::before{
+  content: ""; 
+  position: absolute; 
+  top:0; left:0; 
+  width: 100%; 
+  height: 100%;
+  background-color: rgba(0,0,0,0.75);
+}
+
+.hero h1{
+  position:relative; 
+  z-index: 1; 
+  text-align: left;
+}
+
+.hero p{
+  position:relative; 
+  z-index: 1; 
+  font-size:1.8rem; 
+  line-height: 2rem;
+}
+    
+@media (max-width: 812px){
+
+  .hero {
+      display: block; 
+      padding: 5rem 2.5rem; 
+    }
+
+  .hero p{
+      font-size:1.6rem;
+    }
+  }
+/*Hero*/
+
+/*Pasiunile mele si Portofoliul meu*/
+.my-portofolio{
+  position: relative;
+}
+ 
+.my-passions h2, .my-portofolio h2{
+   position:relative; 
+   z-index: 1;
+   margin-bottom: 7.5rem;
+}
+ 
+.my-portofolio{ 
+   background-image: url("media/Pasiune.jpg");
+   background-repeat: no-repeat;
+   background-position: center; 
+   background-size: cover;
+}
+ 
+.my-portofolio::before{
+   content: ""; 
+   position: absolute; 
+   top:0; 
+   left:0; 
+   width: 100%; 
+   height: 100%; 
+   background-color: rgba(0,0,0,0.75);
+}
+
+.my-passions-inner-container, .my-portofolio-inner-container{
+   color: white;
+}
+
+.my-passions-inner-container h3, .my-portofolio-inner-container h3{
+   position:relative; 
+   z-index: 1;
+   font-size: 2.5rem; 
+   text-align: center; 
+   margin-bottom: 2.5rem;
+}
+
+.my-passions-inner-container p, .my-portofolio-inner-container p{
+   position:relative; 
+   z-index: 1;
+   font-size: 1.6rem; 
+   text-align: justify;
+}
+
+.my-portofolio-inner-container ul{
+   position:relative; 
+   z-index: 1;
+   font-size: 1.6rem; 
+   list-style:disc; 
+   list-style-position: inside; 
+   margin-top: 0.5rem;
+}
+ /*Pasiunile mele si Portofoliul meu*/
+
+ /*Recomandari*/
+.rec-section-box{
+  height: 21rem; 
+  display: flex;
+  align-items: center; 
+  color: white;
+}
+
+.rec-section-box > img{
+  width: 15rem; 
+  height: 15rem; 
+  margin-right: 2.5rem; 
+  border-radius: 50%;
+}
+
+.rec-section-box h3{ 
+  display: block;
+  margin-bottom: 4rem;
+  font-size: 2.5rem;
+}
+    
+.rec-section-box p{ 
+  font-size: 1.6rem;
+}
+
+@media (max-width: 1023px){
+
+  .rec-section-box{
+    height: auto; 
+    display: block; 
+    text-align: center;
+    }
+}
+  /*Recomandari*/
+
+  /*Despre mine*/
+  .about-me-inner-container{ 
+    display: flex; 
+    justify-content:space-around; 
+    align-items:center; 
+    color:#fff;
+}
+
+.about-me-inner-container > img{ 
+    width: 21.6rem; 
+    height: 28.8rem; 
+    border-radius: 0% 25%;
+    margin-right: 5rem;
+}
+
+.about-me-inner-container h3{ 
+    font-size: 3.2rem; 
+    margin-bottom: 3rem;
+}
+
+.about-me-inner-container p{
+    font-size: 2rem;
+}
+
+@media (max-width: 767px){
+      
+.about-me-inner-container{ 
+    display: block; 
+    text-align:center;
+}
+      
+.about-me-inner-container > img{ 
+    width: 16.7rem; 
+    height: 22.4rem; 
+    margin-right: 0; 
+    margin-bottom: 5rem;
+    }
+}
+  /*Despre mine*/
+
+  /*Footer*/
+footer{
+  font-size: 1.6rem; 
+  color:white; 
+  text-align: center;
+}
+
+.footer h3{
+  display: block; 
+  margin-bottom: 2rem; 
+  font-size:2.4rem; 
+  font-weight: 600;
+}
+
+.footer address{
+  margin-bottom: 2rem;
+}
+
+.footer a{
+  display: block;
+  text-decoration: none;
+  color: #fff;
+}
+   /*Footer*/
+
+/*Grid*/
+.grid{
+  width: calc(100% + 5rem); 
+  margin:0 -2.5rem;
+ }
+
+.grid-box{
+  float:left; 
+  margin:0 2.5rem 4rem;
+}
+
+.box-full{
+  width:calc(100% - 5rem);
+}
+
+.box-half{ 
+  width:calc(50% - 5rem);
+}
+
+.box-third{ 
+  width:calc(33.33% - 5rem);
+}
+
+.box-quarter{ 
+  width:calc(25%  - 5rem);
+}
+
+@media (max-width: 767px){
+    .grid-box{
+      float:left; 
+      margin: 0 2.5rem 4rem;
+    }
+    .box-half{
+      width:calc(100% - 5rem);
+    }
+    .box-third{
+      width:calc(50% - 5rem);
+    }
+    .box-quarter{
+      width:calc(33.33% - 5rem);
+    }
+  }
+
+  @media (max-width: 480px){
+    .box-third {width:calc(100% - 5rem);
+    }
+    
+  }
